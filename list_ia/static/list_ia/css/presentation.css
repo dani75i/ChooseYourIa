@@ -1,0 +1,7 @@
+.card-presentation {
+    background-color: var(--color-body);
+    color: var(--color-text);
+    align-items: center;
+    height: 80px;
+    border: none;
+}

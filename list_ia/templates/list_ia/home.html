@@ -1,0 +1,41 @@
+<!-- templates/index.html -->
+
+{% extends "list_ia/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="container main-container">
+  <div class="row">
+
+    <!-- PRESENTATION -->
+    <div class="card card-presentation ">
+      <h2>Discover the best AI tools</h2>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="col-md-3 col-sm-12 " >
+
+      {% include 'list_ia/filtres.html' %}
+
+    </div>
+
+      <!-- RESULTS -->
+      <div class="col-md-9 col-sm-12" >
+
+        {% include 'list_ia/results.html' %}
+
+      </div>
+    </div>
+
+  </div>
+
+  
+
+
+  
+  
+
+
+
+{% endblock content %}
