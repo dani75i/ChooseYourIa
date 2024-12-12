@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'list_ia.apps.ListIaConfig',
-     'compressor',  # new
 ]
 
 MIDDLEWARE = [
@@ -125,11 +124,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# COMPRESS_ROOT = BASE_DIR / 'static'
-
-# COMPRESS_ENABLED = True
-
-# STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 # Répertoire pour stocker les fichiers médias téléchargés
 MEDIA_URL = '/media/'
