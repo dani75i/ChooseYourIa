@@ -5,12 +5,14 @@ from django.shortcuts import render
 from .models import IaItem
 import time
 
+NUMER_BY_PAGE = 6
+
 def accueil(request):
     all_ia_items = IaItem.objects.all()
 
     # Pagination pour l'affichage initial
     page_number = request.GET.get('page', 1)
-    paginator = Paginator(all_ia_items, 4)  
+    paginator = Paginator(all_ia_items, NUMER_BY_PAGE)  
     page_obj = paginator.get_page(page_number)
     
 
@@ -51,7 +53,7 @@ def filter(request):
         for item in queryset:
             print(item.title)
         page_number = request.GET.get('page', 1)  
-        paginator = Paginator(queryset, 4)  
+        paginator = Paginator(queryset, NUMER_BY_PAGE)  
         page_obj = paginator.get_page(page_number)
 
         data = {

@@ -76,7 +76,7 @@
 }
 
 .svg-star {
-    color: gold;
+    color: var(--color-text);
 }
 
 .filter-title {
