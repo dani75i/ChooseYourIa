@@ -14,8 +14,8 @@
   <!-- Catégorie Type -->
   <div class="mb-3">
     <div class="card card-filter">
-      <div class="card-header card-header-filter">
-        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
+      <div class="card-header card-header-filter d-flex align-items-center">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24">
           <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
         </svg>
         
@@ -57,8 +57,8 @@
   <!-- Catégorie Prix -->
   <div class="mb-3">
     <div class="card card-filter">
-      <div class="card-header card-header-filter">
-        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
+      <div class="card-header card-header-filter d-flex align-items-center d-flex align-items-center">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 10h9.231M6 14h9.231M18 5.086A5.95 5.95 0 0 0 14.615 4c-3.738 0-6.769 3.582-6.769 8s3.031 8 6.769 8A5.94 5.94 0 0 0 18 18.916"/>
         </svg>
         <span class="filter-title">Price</span>
@@ -80,12 +80,30 @@
     </div>    
   </div>
 
-  <!-- Catégorie Image -->
+  <!-- Catégorie Country -->
+  <div class="mb-3">
+    <div class="card card-filter">
+      <div class="card-header card-header-filter d-flex align-items-center">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 10h9.231M6 14h9.231M18 5.086A5.95 5.95 0 0 0 14.615 4c-3.738 0-6.769 3.582-6.769 8s3.031 8 6.769 8A5.94 5.94 0 0 0 18 18.916"/>
+        </svg>
+        <span class="filter-title">Country</span>
+      </div>
+      <div class="card-body">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" value="hd" id="french">
+          <label class="form-check-label" for="hd">French</label>
+      </div>
+    </div>    
+  </div>
+  </div>
+
+  <!-- Catégorie Rating -->
   <div class="mb-3">
       <div class="card card-filter">
-        <div class="card-header card-header-filter">          
+        <div class="card-header card-header-filter d-flex align-items-center">          
           <span class="filter-title">
-            <svg class="w-6 h-6 text-gray-800 dark:text-white svg-star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" style="color: white;" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
               <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
             </svg>
             Rating
@@ -124,6 +142,29 @@
               {% endfor %}
             </label>
           </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" value="sd" id="2">
+            <label class="form-check-label" for="sd">
+              {% for i in "01" %}
+              <svg class="w-6 h-6 text-gray-800 dark:text-white svg-star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+              </svg>
+              {% endfor %}
+            </label>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" value="sd" id="1">
+            <label class="form-check-label" for="sd">
+              {% for i in "0" %}
+              <svg class="w-6 h-6 text-gray-800 dark:text-white svg-star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+              </svg>
+              {% endfor %}
+            </label>
+          </div>
+
         </div>
     </div>
   </div>

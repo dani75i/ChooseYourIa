@@ -1,0 +1,4 @@
+.badge {
+    border: solid 2px rgb(136, 135, 136);
+    background-color: var(--color-body);
+}

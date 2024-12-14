@@ -40,7 +40,7 @@
     background-clip: text;
     color: transparent;
     font-weight: bolder;
-    font-size: 35px;
+    font-size: 30px;
     margin-right: 50px;
     margin-left: 10px;
 }
@@ -71,12 +71,12 @@
 }
 
 .card-header-filter {
-    font-weight: bolder;
+
     border-bottom: solid 2px grey
 }
 
 .svg-star {
-    color: var(--color-text);
+    color: gold;
 }
 
 .filter-title {
@@ -84,8 +84,9 @@
     background-clip: text;
     color: transparent;
     font-size: var(--font-size-title);
+    font-weight: bolder;
+    /* padding-top: 10px; */
 }
-
 
 
 
