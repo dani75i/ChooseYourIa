@@ -1,10 +1,10 @@
 {% load static %}
 {% load custom_filters %}
 
-<div id="loading-spinner" style="display: none; text-align: center;">
+<div id="loading-spinner" style="display: none;">
   <div class="spinner-border text-primary custom-spinner" role="status">
   </div> 
-  <span style="color: WHITE;">Chargement...</span>
+  <span style="color: WHITE;"></span>
 </div>
 
 <div class="row" id="results">
@@ -24,7 +24,7 @@
                   <div class="col-md-9 col-8">
                       <div class="card-body card-body-result">
                           <h5 class="card-title">{{ item.title }}</h5>
-                          <p class="card-text fs-7">
+                          <p class="card-text fs-6">
                               {{ item.text }}
                           </p>
                       </div>

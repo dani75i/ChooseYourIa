@@ -5,7 +5,8 @@ from django.shortcuts import render
 from .models import IaItem
 import time
 
-NUMER_BY_PAGE = 6
+NUMER_BY_PAGE = 8
+TIME_OUT_LOADING = 0.5
 
 def accueil(request):
     all_ia_items = IaItem.objects.all()
@@ -32,7 +33,7 @@ def accueil(request):
 
 def filter(request):
     if request.method == 'GET':
-        time.sleep(0.3)  
+        time.sleep(TIME_OUT_LOADING)  
         tag_names = request.GET.getlist('filter[]')
 
         rating = [int(note) for note in tag_names if note.isdigit()]
@@ -78,42 +79,3 @@ def filter(request):
         }
 
         return JsonResponse(data, safe=False)
-
-# def filter(request):
-#     if request.method == 'GET':
-#         time.sleep(0.3)   
-
-#         tag_names = request.GET.getlist('filter[]')
-
-
-#         rating = [int(note) for note in tag_names if note.isdigit()]
-#         tag_names = [tag for tag in tag_names if not tag.isdigit()]
-
-
-#         queryset = IaItem.objects.prefetch_related('tags').all()
-
-#         if tag_names:
-        
-#             queryset = queryset.filter(tags__name__in=tag_names) \
-#                             .annotate(tag_count=Count('tags')) \
-#                             .filter(tag_count=len(tag_names)) \
-#                             .distinct()
-
-#         if rating:
-
-#             queryset = queryset.filter(rating__in=rating)
-
-#         data = [
-#             {
-#                 'id': item.id,
-#                 'title': item.title,
-#                 'text': item.text,
-#                 'image': item.image.url if item.image else None,  
-#                 'rating': item.rating,
-#                 'url': item.url,
-#                 'tags': [tag.name for tag in item.tags.all()]   
-#             }
-#             for item in queryset
-#         ]
-
-#         return JsonResponse(data, safe=False)

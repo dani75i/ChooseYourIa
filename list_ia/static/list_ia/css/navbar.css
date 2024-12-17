@@ -1,0 +1,52 @@
+#title {
+    background-image: var(--color-title) ;
+    background-clip: text;
+    color: transparent;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+
+.nav-link {
+    color: var(--color-text);
+    ;
+    margin-right: 5px;
+
+    
+}
+
+.nav-link:hover {
+    color: var(--color-text);
+    border-bottom: solid 2px var(--color-text);
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    padding-top: 30px;
+
+}
+
+/* FILTRES */
+.card-filter {
+    background-color: var(--color-card);
+    color: var(--color-text);
+}
+
+.card-header-filter {
+
+    border-bottom: solid 2px grey
+}
+
+.svg-star {
+    color: gold;
+}
+
+.filter-title {
+    background-image: var(--color-title)!important;
+    background-clip: text;
+    color: transparent;
+    font-size: var(--font-size-title);
+    font-weight: bolder;
+    /* padding-top: 10px; */
+}
