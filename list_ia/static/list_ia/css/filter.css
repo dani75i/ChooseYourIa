@@ -4,3 +4,19 @@
     z-index: 1000;
   }
   
+
+  .badge-number-total {
+    position: fixed;
+    width: 350px;
+    padding: 10px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    top: 850px;
+    z-index: 10;
+    font-size: 15px;
+    background-color: rgb(66, 61, 61)!important;
+  }
+
+  #number-result {
+    margin-right: 5px;
+  }

@@ -29,11 +29,13 @@ function filter(filter_name, page = 1) { // Ajout de "page" comme paramètre par
     let results = document.getElementById("results");
     let pagination = document.getElementById("pagination");
     let loader = document.getElementById("loading-spinner");
+    let numberTotal = document.getElementById("number-result");
 
     // Afficher le spinner
     loader.style.display = "block";
     results.innerHTML = ""; // Vider les résultats existants
     pagination.innerHTML = ""; // Vider les résultats existants
+    numberTotal.innerHTML = ""; // Vider les résultats existants
     
     $.ajax({
         url: "filter",  
@@ -136,6 +138,7 @@ function filter(filter_name, page = 1) { // Ajout de "page" comme paramètre par
                     filter(filter_name, page); // Recharger avec la nouvelle page
                 });
             });
+            numberTotal.innerHTML = paginationData.total_items 
         },
         error: function(xhr, errmsg, err) {
             // En cas d'erreur
