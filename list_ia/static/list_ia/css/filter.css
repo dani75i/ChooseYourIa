@@ -11,12 +11,23 @@
     padding: 10px;
     left:50%;
     transform: translate(-50%, -50%);
-    top: 700px;
+    top: 800px;
     z-index: 10;
     font-size: 15px;
-    background-color: rgb(66, 61, 61)!important;
+    background-image: var(--color-title) ;
+    color: var(--color-card-text);
+    text-align: center;
   }
 
   #number-result {
     margin-right: 5px;
+    padding: 5px;
+  }
+
+.modal-content {
+    background-color: var(--color-body);
+  }
+
+  .modal-header, .btn-close {
+    color: var(--color-text);
   }

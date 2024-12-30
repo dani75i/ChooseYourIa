@@ -138,7 +138,7 @@ function filter(filter_name, page = 1) { // Ajout de "page" comme paramètre par
                     filter(filter_name, page); // Recharger avec la nouvelle page
                 });
             });
-            numberTotal.innerHTML = paginationData.total_items 
+            numberTotal.innerHTML = "Show " + paginationData.total_items + " results"
         },
         error: function(xhr, errmsg, err) {
             // En cas d'erreur
